@@ -1,6 +1,8 @@
 # Whiteboard-Project
 
-Run the app with 'node server.js'
+First run the command 'npm install' to get all the modules required to run the service.
+
+Then run the app with 'node server.js'
 
 The output should appear in http://localhost:8081/
 
