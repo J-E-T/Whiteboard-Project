@@ -1,6 +1,6 @@
 ﻿var ROOM = "0";
 var COLOR = "black";
-var RADIUS = 5;
+var RADIUS = 25;
 
 var socket, canvas, context;
 
@@ -22,8 +22,8 @@ function get_draw(draw_data)
 {
     if (draw_data["shape"] == "circle")
     {
-        draw_data["x"] = (draw_data["x"] / 1000.0) * canvas.width;
-        draw_data["y"] = (draw_data["y"] / 1000.0) * canvas.height;
+        draw_data["x"] = (draw_data["x"] / 2000.0) * canvas.width;
+        draw_data["y"] = (draw_data["y"] / 2000.0) * canvas.height;
 
         context.beginPath();
         context.arc(draw_data["x"], draw_data["y"], draw_data["radius"], 0, 2 * Math.PI, false);
@@ -78,8 +78,8 @@ function mouse_paint(event)
         "command": "draw",
         "data": {
             "shape": "circle",
-            "x": 1000.0 * (x / rect.width),
-            "y": 1000.0 * (y / rect.height),
+            "x": 2000.0 * (x / rect.width),
+            "y": 2000.0 * (y / rect.height),
             "radius": RADIUS,
             "color": COLOR
         },
