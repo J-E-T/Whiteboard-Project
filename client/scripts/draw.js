@@ -102,13 +102,16 @@ function mouse_up(event)
     draw_enabled = false;
 }
 
+
+
+
 function initialize() {
     ROOM = get_param("room");
     canvas = document.getElementById("canvas");
     context = canvas.getContext("2d");
-    canvas.addEventListener("mousedown", mouse_down, false);
+  	canvas.addEventListener("mousedown", mouse_down, false);
     canvas.addEventListener("mousemove", mouse_move, false);
-    canvas.addEventListener("mouseup", mouse_up, false);
+	canvas.addEventListener("mouseup", mouse_up, false);
 
     socket = io();
     socket.on("servermessage", handle_message);
