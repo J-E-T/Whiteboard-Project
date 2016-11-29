@@ -108,6 +108,8 @@ function mouse_up(event)
 function initialize() {
     ROOM = get_param("room");
     canvas = document.getElementById("canvas");
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
     context = canvas.getContext("2d");
   	canvas.addEventListener("mousedown", mouse_down, false);
     canvas.addEventListener("mousemove", mouse_move, false);
