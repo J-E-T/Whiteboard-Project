@@ -1,5 +1,5 @@
 ﻿var ROOM = "0";
-var COLOR = "black";
+var COLOR = "#663300";
 var RADIUS = 25;
 
 var socket, canvas, context;

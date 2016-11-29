@@ -8,6 +8,7 @@
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/scripts/draw.js"></script>
+    <script src="/scripts/jscolor.js"></script>
 
     <style type="text/css">
         body, canvas {
@@ -32,7 +33,7 @@
             align-items:center;
         }
 
-        .color_button,.color_button * {
+        .color_button,#color_button, #color_button * {
             width:3em;
             height:3em;
             border: thin;
@@ -62,6 +63,7 @@
             <button class="color_button" style="background-color:orange" onclick="change_color('orange');">&nbsp;</button>
             <button class="color_button" style="background-color:yellow" onclick="change_color('yellow');">&nbsp;</button>
             <button class="color_button" style="background-color:cyan" onclick="change_color('cyan');">&nbsp;</button>
+            <button id ="color_button"  style="width:5em" class="jscolor {value:'66ccff'}"></button>
 
         </center>
     </div>
