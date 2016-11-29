@@ -25,3 +25,20 @@ describe('Room', function() {
 		});
 	});
 });
+
+describe('Messages', function(){
+	describe('handleMessages()', function(){
+		it ('Should return true of msg equal "hi', function(){
+			var msg = "hi";
+			var status;
+			if (msg == "hi"){
+				status = true;
+			} else {
+				status = false;
+			}
+
+			assert.equal(status, true);
+			});
+	});
+});
+
