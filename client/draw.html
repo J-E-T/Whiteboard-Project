@@ -63,7 +63,12 @@
             <button class="color_button" style="background-color:orange" onclick="change_color('orange');">&nbsp;</button>
             <button class="color_button" style="background-color:yellow" onclick="change_color('yellow');">&nbsp;</button>
             <button class="color_button" style="background-color:cyan" onclick="change_color('cyan');">&nbsp;</button>
-            <button id ="color_button"  style="width:5em" class="jscolor {value:'66ccff'}"></button>
+            <button id ="color_button"  style="width:5em" class="jscolor  {onFineChange:'update(this)'}" value='ffcc00'></button>
+
+            <script type="text/javascript">function update(picker) {
+                var value = picker.toHEXString();
+                change_color(value);
+            }</script>
 
         </center>
     </div>
