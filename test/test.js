@@ -7,3 +7,21 @@ describe('Array', function() {
   });
 });
 
+
+describe('Room', function() {
+	describe('getRoom()', function(){
+		it ('Should return -1 if empty', function(){
+			var roomIds = {};
+			var rooms = [];
+			var roomId = 1;
+
+			if (!(roomId in roomIds)) {
+	        	roomIds[roomId] = rooms.length;
+	        	rooms.push([]);
+	    	}
+
+	    	assert.equal(rooms.length, 1);
+
+		});
+	});
+});
