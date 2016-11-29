@@ -67,7 +67,7 @@
             <img src="./images/JET.png" alt = "J-E-T">
 
             <button class="action_button" onclick="clear_room();">Wipe</button>
-
+            <select id = "radius" onchange="change_radius();" value=5></select>
             <button class="color_button" style="background-color:black" onclick="change_color('black');">&nbsp;</button>
             <button class="color_button" style="background-color:white" onclick="change_color('white');">&nbsp;</button>
             <button class="color_button" style="background-color:green" onclick="change_color('green');">&nbsp;</button>
@@ -83,12 +83,8 @@
                 var value = picker.toHEXString();
                 change_color(value);
             }</script>
+            
 
-            <form>
-              <input type = "text" name = "radius">
-            </form>
-            <button class="action_button" onclick="change_radius();">Size</button>
-            <button id ="color_button"  style="width:5em" class="jscolor {value:'66ccff'}"></button>
 
     </div>
 </body>
