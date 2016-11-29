@@ -3,7 +3,8 @@ var COLOR = "black";
 var RADIUS = 5;
 
 var RAD_COUNTER = 5;
-
+var lastX, lastY;
+var hasPrevCoord = false;
 var socket, canvas, context;
 
 function get_param(name) {
@@ -31,7 +32,23 @@ function get_draw(draw_data)
         context.arc(draw_data["x"], draw_data["y"], draw_data["radius"], 0, 2 * Math.PI, false);
         context.fillStyle = draw_data["color"];
         context.fill();
+
+        /*context.beginPath();
+        context.strokeStyle = COLOR;
+        context.lineWidth = RADIUS;
+        context.lineJoin = "round";
+        if (hasPrevCoord){
+          context.moveTo(lastX, lastY);
+        } else {
+          context.moveTo(draw_data["x"], draw_data["y"]);
+        }
+        context.lineTo(draw_data["x"], draw_data["y"]);
+        context.closePath();
+        context.stroke();
     }
+        lastX = draw_data["x"]; lastY = draw_data["y"];
+        hasPrevCoord = true;*/
+      }
 }
 
 function get_room(room_data)
@@ -101,6 +118,7 @@ function mouse_move(event)
 
 function mouse_up(event)
 {
+    hasPrevCoord = false;
     draw_enabled = false;
 }
 
@@ -110,7 +128,7 @@ function change_radius()
 	var sel = i.options[i.selectedIndex].value;
 
 	RADIUS = sel;
-  	
+
 }
 
 function initialize_size_selector()
