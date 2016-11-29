@@ -1,6 +1,8 @@
 ﻿var ROOM = "0";
-var COLOR = "#663300";
-var RADIUS = 25;
+var COLOR = "black";
+var RADIUS = 5;
+
+var RAD_COUNTER = 5;
 
 var socket, canvas, context;
 
@@ -102,11 +104,15 @@ function mouse_up(event)
     draw_enabled = false;
 }
 
-
+function change_radius(radius)
+{
+  RADIUS = radius;
+}
 
 
 function initialize() {
     ROOM = get_param("room");
+
     canvas = document.getElementById("canvas");
     canvas.width = $(window).width();
     canvas.height = $(window).height();
