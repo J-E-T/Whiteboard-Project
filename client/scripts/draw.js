@@ -104,15 +104,31 @@ function mouse_up(event)
     draw_enabled = false;
 }
 
-function change_radius(radius)
+function change_radius()
 {
-  RADIUS = radius;
+	var i = document.getElementById("radius");
+	var sel = i.options[i.selectedIndex].value;
+
+	RADIUS = sel;
+  	
 }
 
+function initialize_size_selector()
+{
+	for(var i=1; i<=100; i++){
+	    var select = document.getElementById("radius");
+	    var option = document.createElement("OPTION");
+		select.options.add(option);
+		option.text = i;
+		option.value = i;
+	}
+	$("#radius").val(RADIUS);
+}
 
 function initialize() {
     ROOM = get_param("room");
 
+	initialize_size_selector();
     canvas = document.getElementById("canvas");
     canvas.width = $(window).width();
     canvas.height = $(window).height();
