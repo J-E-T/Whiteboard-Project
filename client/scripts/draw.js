@@ -104,16 +104,9 @@ function mouse_up(event)
     draw_enabled = false;
 }
 
-function change_radius()
+function change_radius(radius)
 {
-    RAD_COUNTER++;
-    var radius = RAD_COUNTER % 5;
-    radius*=5;
-    if (radius != 0){
-      RADIUS = radius;
-    } else {
-      RADIUS = 5;
-    }
+  RADIUS = radius;
 }
 
 

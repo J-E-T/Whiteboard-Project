@@ -38,7 +38,7 @@ describe('Messages', function(){
 			}
 
 			assert.equal(status, true);
-			});
+		});
 	});
 });
 
