@@ -15,3 +15,4 @@ Testing with Mocha :
 
 just type 'mocha' and it'll look for the /test directory
 
+https://docs.google.com/presentation/d/1bCEzO3chOq0EkG9IdFI8LF9qmoErY2_wn0rxBJEhmPg/edit?usp=sharing
