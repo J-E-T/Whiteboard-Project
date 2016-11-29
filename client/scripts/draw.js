@@ -1,6 +1,8 @@
 ﻿var ROOM = "0";
 var COLOR = "black";
-var RADIUS = 25;
+var RADIUS = 5;
+
+var RAD_COUNTER = 5;
 
 var socket, canvas, context;
 
@@ -102,12 +104,25 @@ function mouse_up(event)
     draw_enabled = false;
 }
 
-
+function change_radius()
+{
+    RAD_COUNTER++;
+    var radius = RAD_COUNTER % 5;
+    radius*=5;
+    if (radius != 0){
+      RADIUS = radius;
+    } else {
+      RADIUS = 5;
+    }
+}
 
 
 function initialize() {
     ROOM = get_param("room");
+
     canvas = document.getElementById("canvas");
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
     context = canvas.getContext("2d");
   	canvas.addEventListener("mousedown", mouse_down, false);
     canvas.addEventListener("mousemove", mouse_move, false);

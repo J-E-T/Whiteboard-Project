@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>QuickDraw</title>
+    <title>JET Whiteboard</title>
     <link rel="stylesheet" href="/styles/app.css" type="text/css" />
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -11,7 +11,7 @@
 
     <style type="text/css">
         body, canvas {
-            
+
         }
 
         #canvas {
@@ -26,15 +26,15 @@
             left: 0px;
             width: 100%;
             height: 2em;
-            background:rgba(0,0,0,0.2);
+            background:rgba(0,0,0,0.1);
             height:3em;
             align-content:center;
             align-items:center;
         }
 
         .color_button,.color_button * {
-            width:3em;
-            height:3em;
+            width:2em;
+            height:2em;
             border: thin;
             box-shadow: #000 0px 0px initial;
             border-radius: 0.2em;
@@ -42,15 +42,24 @@
         }
 
         .action_button {
-            height: 3em;
+            height: 2em;
         }
+
+        img {
+          height: 2em;
+          align-content: center;
+          align-items: center;
+        }
+
     </style>
 </head>
 
 <body>
-    <canvas id="canvas" width="2000" height="2000"></canvas>
+    <canvas id="canvas"></canvas>
     <div id="panel_tools">
-        <center>
+
+            <img src="./images/JET.png" alt = "J-E-T">
+
             <button class="action_button" onclick="clear_room();">Wipe</button>
 
             <button class="color_button" style="background-color:black" onclick="change_color('black');">&nbsp;</button>
@@ -61,7 +70,8 @@
             <button class="color_button" style="background-color:purple" onclick="change_color('purple');">&nbsp;</button>
             <button class="color_button" style="background-color:orange" onclick="change_color('orange');">&nbsp;</button>
 
-        </center>
+            <button class="action_button" onclick="change_radius();">Size</button>
+
     </div>
 </body>
 </html>
