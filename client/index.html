@@ -6,9 +6,9 @@
     <title>QuickDraw</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
     <style type="text/css">
-        
+
 span {
-    
+
 }
 
 #logo {
@@ -74,7 +74,7 @@ span {
     position:absolute;
     bottom: 1em;
     width:100%;
-    
+
 }
 
 #footertext {
@@ -83,6 +83,15 @@ span {
     font-weight:normal;
 }
 
+#header {
+    position: absolute;
+    top: auto;
+    width: 100%;
+    background-color: #5261E5;
+}
+
+
+
 a {
     color:red;
     text-decoration:none;
@@ -90,15 +99,20 @@ a {
     </style>
 </head>
 <body>
+
     <div id="content">
-        <!--<img id="logo" src="logo_text3.png" /><br />-->
-        <p class="instructions">Please specify a room name</p><br />
+        <img id="logo" src="./images/JET.png" /><br />
+        <img id="logo" src="./images/Whiteboard.png" /><br />
+
+        <p class="instructions">What's your name?</p><br />
+        <input id="txt_room" class="codebox" value="Name" /><br />
+
+        <p class="instructions">Which room?</p><br />
         <input id="txt_room" class="codebox" value="Lobby" /><br />
         <button id="btn_connect" onclick="btn_connect_pressed();">Connect</button>
     </div>
     <div id="footer">
-        <p id="footertext">
-        </p>
+        <p id="footertext"> Made by J-E-T with love  <3 </p>
     </div>
 
     <script src="scripts/index.js"></script>
