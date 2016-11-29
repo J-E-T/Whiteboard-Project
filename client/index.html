@@ -30,6 +30,7 @@ span {
 
 .instructions {
     font-size:2em;
+    font-family: 'Segoe UI', sans-serif;
     width: 100%;
     margin-top:0.5em;
     margin-bottom:0.0em;
@@ -104,11 +105,11 @@ a {
         <img id="logo" src="./images/JET.png" /><br />
         <img id="logo" src="./images/Whiteboard.png" /><br />
 
-        <p class="instructions">What's your name?</p><br />
-        <input id="txt_room" class="codebox" value="Name" /><br />
 
-        <p class="instructions">Which room?</p><br />
-        <input id="txt_room" class="codebox" value="Lobby" /><br />
+        <input id="txt_room" class="codebox" placeholder="Name" /><br />
+
+        <br>
+        <input id="txt_room" class="codebox" placeholder="Lobby" /><br />
         <button id="btn_connect" onclick="btn_connect_pressed();">Connect</button>
     </div>
     <div id="footer">
