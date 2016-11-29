@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -9,6 +9,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/scripts/draw.js"></script>
     <script src="/scripts/jscolor.js"></script>
+
 
     <style type="text/css">
         body, canvas {
@@ -42,7 +43,20 @@
             border-radius: 0.2em;
             margin:0;
         }
-
+        .erase_button {
+            width:3em;
+            height:3em;
+            position: relative;
+            border: thin;
+            box-shadow: #000 0px 0px initial;
+            border-radius: 0.2em;
+            margin:0;
+            top: 7px
+        }
+        .logo {
+            position: relative;
+            top: 7px
+        }
         .action_button {
             height: 2em;
         }
@@ -64,12 +78,14 @@
     <canvas id="canvas"></canvas>
     <div id="panel_tools">
 
-            <img src="./images/JET.png" alt = "J-E-T">
 
-            <button class="action_button" onclick="clear_room();">Wipe</button>
+            <img class="logo" src="./images/JET.png" alt = "J-E-T">
+
             <select id = "radius" onchange="change_radius();" value=5></select>
+            <button class="erase_button" onclick="clear_room();"><img src="./images/trash.png"/></button>
+            <button class="erase_button" onclick="change_color('white');"><img src="./images/eraser.png"/></button>
             <button class="color_button" style="background-color:black" onclick="change_color('black');">&nbsp;</button>
-            <button class="color_button" style="background-color:white" onclick="change_color('white');">&nbsp;</button>
+
             <button class="color_button" style="background-color:green" onclick="change_color('green');">&nbsp;</button>
             <button class="color_button" style="background-color:red" onclick="change_color('red');">&nbsp;</button>
             <button class="color_button" style="background-color:blue" onclick="change_color('blue');">&nbsp;</button>
@@ -84,8 +100,7 @@
                 change_color(value);
             }</script>
 
-
-
     </div>
+
 </body>
 </html>
